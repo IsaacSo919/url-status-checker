@@ -7,3 +7,5 @@ try:
     # 200 means the request was successful
 except requests.exceptions.Timeout:
     print("Request timed out. The cause is not yet known.")
+except requests.exceptions.MissingSchema:
+    print("Please include https:// or http:// in the URL.") 

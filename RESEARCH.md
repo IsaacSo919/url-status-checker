@@ -1,4 +1,5 @@
-\## Handling HTTP timeouts
+Task 1
+## Handling HTTP timeouts
 
 
 
@@ -41,4 +42,12 @@ The Timeout exception handler displayed my message.
 A timeout alone does not tell me the cause of the problem.
 
 This was one manual test using a public service.
+
+Task 2
+Question: example.com  MissingSchema
+
+Decision: Just remind user  to add "https://"
+
+Verifiy: Succssful
+
 
