@@ -1,4 +1,5 @@
 Task 1
+
 ## Handling HTTP timeouts
 
 
@@ -43,6 +44,8 @@ A timeout alone does not tell me the cause of the problem.
 
 This was one manual test using a public service.
 
+
+
 Task 2
 Question: example.com  MissingSchema
 
@@ -50,4 +53,34 @@ Decision: Just remind user  to add "https://"
 
 Verifiy: Succssful
 
+
+Task 3
+
+\## Invalid URLs
+
+
+
+\- Input tested: https://
+
+\- Original result: InvalidURL — No host supplied.
+
+\- Change: Added an InvalidURL exception handler.
+
+\- Retest result: The program displayed a helpful message without a traceback.
+
+
+
+\## Redirects
+
+
+
+\- http://example.com returned 200 with 0 redirects.
+
+\- https://httpbin.org/redirect/1 returned 200 with 1 redirect.
+
+\- The final URL was https://httpbin.org/get.
+
+\- I learned that a changed URL alone does not prove a redirect.
+
+&#x20; response.history records the redirect responses.
 
