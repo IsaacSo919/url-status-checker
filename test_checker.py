@@ -9,6 +9,12 @@ class TestStatusDescription(unittest.TestCase):
             result,
             "Not Found: The requested resource could not be found."
         )
+    def test_418_description(self):
+        result = describe_status_code(418)
+        self.assertEqual(result,"Status code 418: No description available.")
+        
+        
+        
 
 
 if __name__ == "__main__":
