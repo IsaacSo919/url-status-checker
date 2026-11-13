@@ -16,6 +16,8 @@ def main():
     try:
         url = input("Enter a URL: ")
         response = requests.get(url, timeout = 5 )
+        print(f"Final URL: {response.url}")
+        print(f"Redirect count: {len(response.history)}")
         print (f"Status Code: {response.status_code}")
         print (f"Description: {describe_status_code(response.status_code)}")
     except requests.exceptions.Timeout:
@@ -25,8 +27,9 @@ def main():
     except requests.exceptions.ConnectionError as error:
         print("Could not establish a connection.")
         print(error)
-        
-        
+    except requests.exceptions.InvalidURL:
+        print("Invalid URL. Enter a complete URL, such as https://example.com.")
+
 if __name__ == "__main__":
     main()
         
