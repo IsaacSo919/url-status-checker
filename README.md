@@ -11,3 +11,19 @@ Run the follow command in cmd:
 Usage：
     python checker.py
     then input a full URL with https:// or http://
+
+## Limitations
+## Limitations
+
+The tool checks HTTP responses, but it does not test website
+features such as login or checkout.
+
+A timeout does not tell us the exact cause of the problem.
+
+The current unit tests only check the descriptions for status
+codes 404 and 418.
+## Future improvements
+
+I would add automated tests for request handling, including
+timeouts and connection errors. These tests would use simulated
+responses and exceptions so they do not depend on live websites.
