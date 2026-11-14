@@ -12,7 +12,16 @@ Usage：
     python checker.py
     then input a full URL with https:// or http://
 
-## Limitations
+## Tests
+
+Run the unit tests from the project directory:
+
+```bat
+python -m unittest -v
+```
+
+These tests check the descriptions for status codes 404 and 418.
+
 ## Limitations
 
 The tool checks HTTP responses, but it does not test website
