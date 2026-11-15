@@ -12,6 +12,17 @@ Usage：
     python checker.py
     then input a full URL with https:// or http://
 
+## How it works
+
+The user enters a full URL starting with http:// or https://.
+
+The program uses Requests to send an HTTP GET request with
+timeout=5. Requests follows redirects by default.
+
+The program displays the final URL, redirect count, status code
+and description. It catches timeout, missing scheme, connection
+and invalid URL exceptions and displays error messages.
+
 ## Tests
 
 Run the unit tests from the project directory:
