@@ -3,8 +3,7 @@ Task 1
 ## Handling HTTP timeouts
 
 
-
-\### What I needed to learn
+### What I needed to learn
 
 
 
@@ -12,23 +11,23 @@ How to set a timeout and handle a request that takes too long.
 
 
 
-\### Sources I read
+### Sources I read
 
-\- ChatGPT explanations and examples.
+- ChatGPT explanations and examples.
 
-\- Requests Quickstart: https://requests.readthedocs.io/en/latest/user/quickstart/
+- Requests Quickstart: https://requests.readthedocs.io/en/latest/user/quickstart/
 
-&#x20; Sections read: Make a Request and Response Status Codes.
+Sections read: Make a Request and Response Status Codes.
 
 
 
-\### What I tested
+### What I tested
 
 I requested https://httpbin.org/delay/10 with timeout=5.
 
 
 
-\### Actual result
+### Actual result
 
 The program printed:
 
@@ -36,7 +35,7 @@ The program printed:
 
 
 
-\### What I learned and limitations
+### What I learned and limitations
 
 The Timeout exception handler displayed my message.
 
@@ -56,31 +55,39 @@ Verifiy: Succssful
 
 Task 3
 
-\## Invalid URLs
+## Invalid URLs
 
 
 
-\- Input tested: https://
+- Input tested: https://
 
-\- Original result: InvalidURL — No host supplied.
+- Original result: InvalidURL — No host supplied.
 
-\- Change: Added an InvalidURL exception handler.
+- Change: Added an InvalidURL exception handler.
 
-\- Retest result: The program displayed a helpful message without a traceback.
-
-
-
-\## Redirects
+- Retest result: The program displayed a helpful message without a traceback.
 
 
 
-\- http://example.com returned 200 with 0 redirects.
+## Redirects
 
-\- https://httpbin.org/redirect/1 returned 200 with 1 redirect.
 
-\- The final URL was https://httpbin.org/get.
 
-\- I learned that a changed URL alone does not prove a redirect.
+- http://example.com returned 200 with 0 redirects.
 
-&#x20; response.history records the redirect responses.
+- https://httpbin.org/redirect/1 returned 200 with 1 redirect.
 
+- The final URL was https://httpbin.org/get.
+
+- I learned that a changed URL alone does not prove a redirect.
+
+ response.history records the redirect responses.
+
+## How I assessed the information
+
+I used the Requests documentation to understand how to make a
+request and read its status code. I used ChatGPT to explain
+concepts and suggest examples.
+
+I did not assume the suggestions were correct. I ran the code
+and compared the actual output with the expected result.
